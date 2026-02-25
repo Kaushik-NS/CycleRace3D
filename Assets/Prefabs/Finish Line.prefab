@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 5635845529546761907}
   m_Layer: 0
   m_Name: Finish Line
-  m_TagString: FinshLine
+  m_TagString: FinishLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,8 +297,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.975421, y: 3.5673108, z: 1}
-  m_Center: {x: -0.0768981, y: 1.2836549, z: 2.0460949e-16}
+  m_Size: {x: 14.975421, y: 3.5673108, z: 1.4002944}
+  m_Center: {x: -0.0768981, y: 1.2836549, z: 0.20014727}
 --- !u!1 &6669069131202372134
 GameObject:
   m_ObjectHideFlags: 0

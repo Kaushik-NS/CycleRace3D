@@ -63,14 +63,17 @@
     <Compile Include="Assets\SimpleBikeControl\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\LogoToggleController.cs" />
     <Compile Include="Assets\SimpleBikeControl\Scripts\Biker.cs" />
+    <Compile Include="Assets\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\SimpleBikeControl\Scripts\Cameras\PivotBasedCameraRig.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\TrackGenerator.cs" />
     <Compile Include="Assets\SimpleBikeControl\Scripts\Cameras\AbstractTargetFollower.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Potrait.cs" />
     <Compile Include="Assets\Scripts\ThemeManager.cs" />
     <Compile Include="Assets\SimpleBikeControl\Scripts\SpeedUpText.cs" />
     <Compile Include="Assets\Scripts\FollowCycle.cs" />
+    <Compile Include="Assets\Scripts\MultiCycleCamera.cs" />
     <Compile Include="Assets\Scripts\SliderStepDisplay.cs" />
     <Compile Include="Assets\Scripts\SplitScreenSetup.cs" />
     <Compile Include="Assets\SimpleBikeControl\Scripts\GameManager.cs" />
@@ -79,9 +82,6 @@
     <Compile Include="Assets\Scripts\CycleController.cs" />
     <Compile Include="Assets\SimpleBikeControl\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\CycleAssignmentManager.cs" />
-    <Compile Include="Assets\Scripts\MultiCycleCamera.cs" />
-    <Compile Include="Assets\Scripts\FollowCamera.cs" />
-    <Compile Include="Assets\Scripts\TrackGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

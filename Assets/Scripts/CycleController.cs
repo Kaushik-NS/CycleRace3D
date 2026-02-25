@@ -1,5 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CycleController : MonoBehaviour
@@ -18,6 +21,10 @@ public class CycleController : MonoBehaviour
     public float acceleration = 8f;
     public float deceleration = 10f;
     public float turnSpeed = 120f;
+    public Transform SeatMount;
+
+    public TextMeshProUGUI WinnerText;
+    public TextMeshProUGUI Winner;
 
     Rigidbody rb;
     float currentSpeed = 0f;
@@ -90,4 +97,27 @@ public class CycleController : MonoBehaviour
         float turnAmount = turnInput * turnSpeed * Time.fixedDeltaTime * (Mathf.Abs(currentSpeed) / maxSpeed);
         rb.MoveRotation(rb.rotation * Quaternion.Euler(0, turnAmount, 0));
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log(" Somethging hit..." + other.gameObject.tag);
+        if (other.gameObject.tag == "FinishLine")
+        {
+            Winner.text = Winner.text + GetComponentInChildren<TMP_Text>(true).text;
+            Debug.Log("The winner is " + GetComponentInChildren<TMP_Text>(true).text);
+            GameManager.GameStarted = false;
+            StartCoroutine(ShowWinner());
+        }
+    }
+
+    IEnumerator ShowWinner()
+    {
+        Winner.gameObject.SetActive(true);
+        WinnerText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        Winner.gameObject.SetActive(false);
+        WinnerText.gameObject.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
 }
+ 

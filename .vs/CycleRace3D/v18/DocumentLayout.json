@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\CycleRace3D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|d:\\unityprojects\\cyclerace3d\\assets\\scripts\\cycleassignmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cycleassignmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:2:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|d:\\unityprojects\\cyclerace3d\\assets\\scripts\\cycleassignmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cycleassignmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|d:\\unityprojects\\cyclerace3d\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|D:\\UnityProjects\\CycleRace3D\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|d:\\unityprojects\\cyclerace3d\\assets\\scripts\\cycleassignmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cycleassignmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,9 +32,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\CycleAssignmentManager.cs",
               "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\CycleAssignmentManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\CycleAssignmentManager.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAwC0AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-25T08:24:33.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Assets\\Scripts\\CycleAssignmentManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\CycleAssignmentManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CycleAssignmentManager.cs",
+              "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\CycleAssignmentManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CycleAssignmentManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T09:09:16.735Z",
               "EditorCaption": ""
             },
             {
@@ -43,8 +60,7 @@
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
               "ViewState": "AgIAAIEAAAAAAAAAAAAmwJUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T08:24:33.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-25T08:24:33.394Z"
             }
           ]
         }

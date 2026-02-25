@@ -13,6 +13,7 @@ public class CycleAssignmentManager : MonoBehaviour
 
     void Start()
     {
+        startButton.enabled = false;
         playerToCycle = new int[playerButtons.Length];
 
         for (int i = 0; i < playerToCycle.Length; i++)
@@ -70,13 +71,13 @@ public class CycleAssignmentManager : MonoBehaviour
             if (playerToCycle[i] == -1)
             {
                 if (startButton != null)
-                    startButton.interactable = false;
+                    startButton.enabled = false;
                 return;
             }
         }
 
-        // If reached here → all assigned
+        // If reached here  all assigned
         if (startButton != null)
-            startButton.interactable = true;
+            startButton.enabled = true;
     }
 }

@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     public Toggle nameEntryToggle;
 
-    public TMP_InputField[] playerInputs;   // drag all 4 fields here
+    public TMP_InputField[] playerInputs;
 
 
 
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public float returnSpeed = 3f;
 
     public static bool GameStarted = false;
+    public GameObject errorText;
 
 
     void Awake()
@@ -52,16 +53,18 @@ public class GameManager : MonoBehaviour
         GameStarted = true;
         HomeScreenPanel.SetActive(false);
 
-        nameEntryToggle.onValueChanged.AddListener(OnToggleChanged);
-        OnToggleChanged(nameEntryToggle.isOn);
+        //nameEntryToggle.onValueChanged.AddListener(OnToggleChanged(true));
+        //OnToggleChanged(nameEntryToggle.isOn);
 
         Invoke(nameof(PlayCameraAnim), delay);
 
 
     }
 
-    void OnToggleChanged(bool allowCustomNames)
+    public void OnToggleChanged()
     {
+        bool allowCustomNames = nameEntryToggle.isOn;
+
         for (int i = 0; i < playerInputs.Length; i++)
         {
             if (playerInputs[i] == null) continue;
@@ -73,6 +76,10 @@ public class GameManager : MonoBehaviour
             if (!allowCustomNames)
             {
                 playerInputs[i].text = "Player " + (i + 1);
+            }
+            else
+            {
+                playerInputs[i].text = " ";
             }
         }
     }
@@ -126,9 +133,48 @@ public class GameManager : MonoBehaviour
 
     public void GoToCycleSelectionScreen()
     {
+        bool allValid = true;
+
+        for (int i = 0; i < playerInputs.Length; i++)
+        {
+            if (playerInputs[i] == null) continue;
+
+            // Trim removes whitespace
+            string name = playerInputs[i].text.Trim();
+
+            if (string.IsNullOrEmpty(name))
+            {
+                allValid = false;
+                break;
+            }
+        }
+
+        if (!allValid)
+        {
+            if (errorText != null)
+            {
+                errorText.SetActive(true);
+                StopAllCoroutines();                     // prevent multiple timers
+                StartCoroutine(HideErrorAfterDelay(2f)); // hide after 2 sec
+            }
+            return;
+        }
+
+        // Valid → hide error + continue
+        if (errorText != null)
+            errorText.SetActive(false);
+
         CycleSelectionScreen.SetActive(true);
         SettingsScreen.SetActive(false);
         HomeScreenPanel.SetActive(false);
+    }
+
+    IEnumerator HideErrorAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (errorText != null)
+            errorText.SetActive(false);
     }
 
     public void GoToSettingsScreen()
@@ -140,8 +186,8 @@ public class GameManager : MonoBehaviour
 
     public void CloseSettingsScreen()
     {
-        HomeScreenPanel.SetActive(false);
+        HomeScreenPanel.SetActive(true);
         CycleSelectionScreen.SetActive(false);
-        SettingsScreen.SetActive(true);
+        SettingsScreen.SetActive(false);
     }
 }

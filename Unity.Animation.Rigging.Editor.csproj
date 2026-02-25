@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8674B501-7810-BF1C-EEBE-DC65919559B7}</ProjectGuid>
+    <ProjectGuid>{329AADB8-452F-A1C2-6384-7793850903E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Animation.Rigging.Editor</AssemblyName>
@@ -1017,27 +1017,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Animation.Rigging.csproj">
-      <Project>{C5B447E0-5B2B-E025-C91D-888AD553282D}</Project>
+      <Project>{CAAF73FF-2EAF-6C3A-A156-32AB0E9F8070}</Project>
       <Name>Unity.Animation.Rigging</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{9714F4CF-F972-D756-1FA8-3641A097B1E5}</Project>
+      <Project>{9CCB78F1-030F-C0B1-6A0D-FD1E197E1B8F}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{805C500D-9A22-5AA1-8371-171A59B5BACC}</Project>
+      <Project>{5F87FF5A-8290-1119-9F9F-48717665AD6F}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{B222DD19-03C4-E43D-BAA5-B9D8D61E4285}</Project>
+      <Project>{5D7ED0FC-105F-DD16-1622-458FB5EF8A33}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{1D6B5B40-B715-425F-08FD-74DD3C20847B}</Project>
+      <Project>{96785D20-DA5D-A075-336A-EDFF2F4B07E5}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{69A8B664-B736-1F08-D3D7-1699F65886B3}</Project>
+      <Project>{9C3003D1-1048-3A79-53DC-0BF32EED8AF0}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

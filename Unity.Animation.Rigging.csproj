@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C5B447E0-5B2B-E025-C91D-888AD553282D}</ProjectGuid>
+    <ProjectGuid>{CAAF73FF-2EAF-6C3A-A156-32AB0E9F8070}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Animation.Rigging</AssemblyName>
@@ -996,15 +996,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{9714F4CF-F972-D756-1FA8-3641A097B1E5}</Project>
+      <Project>{9CCB78F1-030F-C0B1-6A0D-FD1E197E1B8F}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{805C500D-9A22-5AA1-8371-171A59B5BACC}</Project>
+      <Project>{5F87FF5A-8290-1119-9F9F-48717665AD6F}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{B222DD19-03C4-E43D-BAA5-B9D8D61E4285}</Project>
+      <Project>{5D7ED0FC-105F-DD16-1622-458FB5EF8A33}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

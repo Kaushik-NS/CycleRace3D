@@ -325,7 +325,7 @@
 -r:"D:/2021.3.45f2/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll"
 -r:"D:/2021.3.45f2/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll"
 -r:"D:/2021.3.45f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
--r:"D:/UnityProj/CycleRace/Library/PackageCache/com.unity.burst@1.8.18/Unity.Burst.Unsafe.dll"
+-r:"D:/UnityProjects/CycleRace3D/Library/PackageCache/com.unity.burst@1.8.18/Unity.Burst.Unsafe.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Library/PackageCache/com.unity.burst@1.8.18/Runtime/BurstCompileAttribute.cs"

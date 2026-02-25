@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject HomeScreenPanel;
-    public Animator cameraAnimator;
+    //public Animator cameraAnimator;
     public Transform cameraTransform;
     public Transform gameplayCameraTarget;
     public GameObject CycleSelectionScreen;
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Toggle nameEntryToggle;
 
     public TMP_InputField[] playerInputs;
+    public Button[] playerAssignmentButtons;
 
 
 
@@ -29,6 +30,16 @@ public class GameManager : MonoBehaviour
 
     public static bool GameStarted = false;
     public GameObject errorText;
+    public string Player1Name;
+    public string Player2Name;      
+    public string Player3Name;
+    public string Player4Name;
+
+    public TMP_Text[] playerHUDNames;
+
+    public UnityEngine.UI.Slider meterSlider;
+    public TrackGenerator trackGenerator;
+
 
 
     void Awake()
@@ -52,11 +63,12 @@ public class GameManager : MonoBehaviour
     {
         GameStarted = true;
         HomeScreenPanel.SetActive(false);
+        CycleSelectionScreen.SetActive(false);
 
         //nameEntryToggle.onValueChanged.AddListener(OnToggleChanged(true));
         //OnToggleChanged(nameEntryToggle.isOn);
 
-        Invoke(nameof(PlayCameraAnim), delay);
+        //Invoke(nameof(PlayCameraAnim), delay);
 
 
     }
@@ -82,54 +94,66 @@ public class GameManager : MonoBehaviour
                 playerInputs[i].text = " ";
             }
         }
+        Player1Name = playerInputs[0].text;
+        Player2Name = playerInputs[1].text;
+        Player3Name = playerInputs[2].text;
+        Player4Name = playerInputs[3].text;
+
+        playerAssignmentButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = playerInputs[0].text;
+        playerAssignmentButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = playerInputs[1].text;
+        playerAssignmentButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = playerInputs[2].text;
+        playerAssignmentButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = playerInputs[3].text;
+
+
+        UpdateHUDNames();
     }
 
-    void PlayCameraAnim()
-    {
-        // Enable animator and play intro animation
-        cameraAnimator.enabled = true;
-        cameraAnimator.Play("RaceTrans", 0, 0f);   // force start from frame 0
+    //void PlayCameraAnim()
+    //{
+    //    // Enable animator and play intro animation
+    //    cameraAnimator.enabled = true;
+    //    cameraAnimator.Play("RaceTrans", 0, 0f);   // force start from frame 0
 
-        StartCoroutine(WaitThenReturn());
-    }
+    //    StartCoroutine(WaitThenReturn());
+    //}
 
-    IEnumerator WaitThenReturn()
-    {
-        // Wait one frame so Animator updates state
-        yield return null;
+    //IEnumerator WaitThenReturn()
+    //{
+    //    // Wait one frame so Animator updates state
+    //    yield return null;
 
-        // Get current animation length correctly
-        AnimatorStateInfo info = cameraAnimator.GetCurrentAnimatorStateInfo(0);
-        float len = info.length;
+    //    // Get current animation length correctly
+    //    AnimatorStateInfo info = cameraAnimator.GetCurrentAnimatorStateInfo(0);
+    //    float len = info.length;
 
-        // Wait for animation to finish
-        yield return new WaitForSeconds(len);
+    //    // Wait for animation to finish
+    //    yield return new WaitForSeconds(len);
 
-        //  VERY IMPORTANT: completely release Animator control
-        cameraAnimator.Rebind();
-        cameraAnimator.Update(0f);
-        cameraAnimator.enabled = false;
+    //    //  VERY IMPORTANT: completely release Animator control
+    //    cameraAnimator.Rebind();
+    //    cameraAnimator.Update(0f);
+    //    cameraAnimator.enabled = false;
 
-        // Smoothly move camera back to gameplay target
-        while (Vector3.Distance(cameraTransform.position, gameplayCameraTarget.position) > 0.01f)
-        {
-            cameraTransform.position = Vector3.Lerp(
-                cameraTransform.position,
-                gameplayCameraTarget.position,
-                Time.deltaTime * returnSpeed);
+    //    // Smoothly move camera back to gameplay target
+    //    while (Vector3.Distance(cameraTransform.position, gameplayCameraTarget.position) > 0.01f)
+    //    {
+    //        cameraTransform.position = Vector3.Lerp(
+    //            cameraTransform.position,
+    //            gameplayCameraTarget.position,
+    //            Time.deltaTime * returnSpeed);
 
-            cameraTransform.rotation = Quaternion.Lerp(
-                cameraTransform.rotation,
-                gameplayCameraTarget.rotation,
-                Time.deltaTime * returnSpeed);
+    //        cameraTransform.rotation = Quaternion.Lerp(
+    //            cameraTransform.rotation,
+    //            gameplayCameraTarget.rotation,
+    //            Time.deltaTime * returnSpeed);
 
-            yield return null;
-        }
+    //        yield return null;
+    //    }
 
-        // Snap final exact transform
-        cameraTransform.position = gameplayCameraTarget.position;
-        cameraTransform.rotation = gameplayCameraTarget.rotation;
-    }
+    //    // Snap final exact transform
+    //    cameraTransform.position = gameplayCameraTarget.position;
+    //    cameraTransform.rotation = gameplayCameraTarget.rotation;
+    //}
 
     public void GoToCycleSelectionScreen()
     {
@@ -164,6 +188,18 @@ public class GameManager : MonoBehaviour
         if (errorText != null)
             errorText.SetActive(false);
 
+        Player1Name = playerInputs[0].text;
+        Player2Name = playerInputs[1].text;
+        Player3Name = playerInputs[2].text;
+        Player4Name = playerInputs[3].text;
+
+        playerAssignmentButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = playerInputs[0].text;
+        playerAssignmentButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = playerInputs[1].text;
+        playerAssignmentButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = playerInputs[2].text;
+        playerAssignmentButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = playerInputs[3].text;
+
+        UpdateHUDNames();
+
         CycleSelectionScreen.SetActive(true);
         SettingsScreen.SetActive(false);
         HomeScreenPanel.SetActive(false);
@@ -189,5 +225,22 @@ public class GameManager : MonoBehaviour
         HomeScreenPanel.SetActive(true);
         CycleSelectionScreen.SetActive(false);
         SettingsScreen.SetActive(false);
+
+        // BUILD TRACK USING SLIDER VALUE
+        if (trackGenerator != null && meterSlider != null)
+        {
+            float selectedDistance = meterSlider.value;
+            trackGenerator.BuildTrack(selectedDistance);
+        }
+    }
+
+    void UpdateHUDNames()
+    {
+        if (playerHUDNames == null || playerHUDNames.Length < 4) return;
+
+        playerHUDNames[0].text = Player1Name;
+        playerHUDNames[1].text = Player2Name;
+        playerHUDNames[2].text = Player3Name;
+        playerHUDNames[3].text = Player4Name;
     }
 }

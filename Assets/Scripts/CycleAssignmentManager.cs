@@ -1,3 +1,5 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +10,15 @@ public class CycleAssignmentManager : MonoBehaviour
 
     public Button startButton;
 
+    public GameObject[] playerObjects;     // player characters in scene
+    public Transform[] cycleSeatMounts;    // drag SeatMount of each cycle here
+
     int selectedPlayer = -1;
     int[] playerToCycle;   // stores mapping
+
+
+
+    public GameManager GM;
 
     void Start()
     {
@@ -31,7 +40,10 @@ public class CycleAssignmentManager : MonoBehaviour
             int index = i;
             cycleButtons[i].onClick.AddListener(() => SelectCycle(index));
         }
+
+
     }
+
 
     void SelectPlayer(int playerIndex)
     {
@@ -57,6 +69,31 @@ public class CycleAssignmentManager : MonoBehaviour
 
         // Disable chosen cycle button
         cycleButtons[cycleIndex].interactable = false;
+
+        // ⭐ MOUNT PLAYER TO BIKE
+        GameObject playerObj = playerObjects[selectedPlayer];
+        Transform seatMount = cycleSeatMounts[cycleIndex];
+
+        if (playerObj != null && seatMount != null)
+        {
+            // Find SeatingPosition inside SeatMount
+            Transform seatingPos = seatMount.Find("SeatingPosition");
+
+            // Parent to SeatMount
+            playerObj.transform.SetParent(seatMount);
+
+            if (seatingPos != null)
+            {
+                playerObj.transform.position = seatingPos.position;
+                playerObj.transform.rotation = seatingPos.rotation;
+            }
+            else
+            {
+                // fallback
+                playerObj.transform.localPosition = Vector3.zero;
+                playerObj.transform.localRotation = Quaternion.identity;
+            }
+        }
 
         // Reset selection
         selectedPlayer = -1;

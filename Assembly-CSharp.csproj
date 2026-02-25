@@ -79,6 +79,9 @@
     <Compile Include="Assets\Scripts\CycleController.cs" />
     <Compile Include="Assets\SimpleBikeControl\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\CycleAssignmentManager.cs" />
+    <Compile Include="Assets\Scripts\MultiCycleCamera.cs" />
+    <Compile Include="Assets\Scripts\FollowCamera.cs" />
+    <Compile Include="Assets\Scripts\TrackGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

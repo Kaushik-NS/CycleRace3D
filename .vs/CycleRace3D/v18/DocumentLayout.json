@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\CycleRace3D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|d:\\unityprojects\\cyclerace3d\\assets\\scripts\\cyclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cyclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:2:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|d:\\unityprojects\\cyclerace3d\\assets\\scripts\\cyclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cyclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|D:\\UnityProjects\\CycleRace3D\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|d:\\unityprojects\\cyclerace3d\\assets\\scripts\\cyclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cyclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|D:\\UnityProjects\\CycleRace3D\\assets\\scripts\\trackgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +25,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|D:\\UnityProjects\\CycleRace3D\\assets\\scripts\\multicyclecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\multicyclecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|d:\\unityprojects\\cyclerace3d\\assets\\scripts\\cycleassignmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E75F52F-E629-4610-875A-84D599B6404E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cycleassignmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CycleAssignmentManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\CycleAssignmentManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CycleAssignmentManager.cs",
+              "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\CycleAssignmentManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CycleAssignmentManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T03:14:03.758Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,9 +61,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\CycleController.cs",
               "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\CycleController.cs",
               "RelativeToolTip": "Assets\\Scripts\\CycleController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGAAAABuAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAwwH8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-25T13:15:23.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Assets\\Scripts\\CycleController.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\CycleController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CycleController.cs",
+              "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\CycleController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CycleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:26:48.615Z",
               "EditorCaption": ""
             },
             {
@@ -53,46 +87,49 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAAwAIBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-25T13:15:23.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TrackGenerator.cs",
               "DocumentMoniker": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\TrackGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TrackGenerator.cs",
               "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\TrackGenerator.cs",
               "RelativeToolTip": "Assets\\Scripts\\TrackGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T13:15:23.898Z"
+              "WhenOpened": "2026-02-25T13:15:23.898Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FollowCamera.cs",
               "DocumentMoniker": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\FollowCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FollowCamera.cs",
               "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\FollowCamera.cs",
               "RelativeToolTip": "Assets\\Scripts\\FollowCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACySURBVDhPYxgFEHDjxY3/Xqvc/wtO5P1vvdji/40X1/9DpcBg3rm5cD4yGw6sF5v/bz7UAJZoAtIgw8ASUAAyGMpEYYMAI4gACb7P/wxmg4DuXM3/l5OvM4JsKz5cABVFBa6y7gyrgtZA9KCbig7wuYAJSpMNsBoA8gKIBnkBZiOIRmaHrQtBuMQTGGjNhxvBAk1AGhQTYAkoQHY2MhsOQNFotcgcbIPnSjfSo3FEAwYGAA95Yu3hOJS9AAAAAElFTkSuQmCC",
-              "WhenOpened": "2026-02-25T13:15:23.913Z"
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T13:15:23.913Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MultiCycleCamera.cs",
               "DocumentMoniker": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\MultiCycleCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MultiCycleCamera.cs",
               "ToolTip": "D:\\UnityProjects\\CycleRace3D\\Assets\\Scripts\\MultiCycleCamera.cs",
               "RelativeToolTip": "Assets\\Scripts\\MultiCycleCamera.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAfAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACySURBVDhPYxgFEHDjxY3/Xqvc/wtO5P1vvdji/40X1/9DpcBg3rm5cD4yGw6sF5v/bz7UAJZoAtIgw8ASUAAyGMpEYYMAI4gACb7P/wxmg4DuXM3/l5OvM4JsKz5cABVFBa6y7gyrgtZA9KCbig7wuYAJSpMNsBoA8gKIBnkBZiOIRmaHrQtBuMQTGGjNhxvBAk1AGhQTYAkoQHY2MhsOQNFotcgcbIPnSjfSo3FEAwYGAA95Yu3hOJS9AAAAAElFTkSuQmCC",
-              "WhenOpened": "2026-02-25T13:15:23.913Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T13:15:23.913Z",
+              "EditorCaption": ""
             }
           ]
         }

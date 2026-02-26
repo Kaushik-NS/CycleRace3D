@@ -26,8 +26,10 @@ public class CycleController : MonoBehaviour
     public TextMeshProUGUI WinnerText;
     public TextMeshProUGUI Winner;
 
+
     Rigidbody rb;
     float currentSpeed = 0f;
+    public GameManager GM;
 
     void Awake()
     {
@@ -79,6 +81,9 @@ public class CycleController : MonoBehaviour
                 turnInput = Input.GetKey(KeyCode.F) ? -1 :
                             Input.GetKey(KeyCode.H) ? 1 : 0;
                 break;
+
+
+                
         }
 
         // Smooth acceleration / deceleration
@@ -94,14 +99,26 @@ public class CycleController : MonoBehaviour
         rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
 
         // Smooth turning 
-        float turnAmount = turnInput * turnSpeed * Time.fixedDeltaTime * (Mathf.Abs(currentSpeed) / maxSpeed);
+        //float turnAmount = turnInput * turnSpeed * Time.fixedDeltaTime * (Mathf.Abs(currentSpeed) / maxSpeed);
+        float direction = Mathf.Sign(currentSpeed); // forward or reverse
+
+        float turnAmount =
+            turnInput *
+            turnSpeed *
+            direction *
+            Time.fixedDeltaTime *
+            (Mathf.Abs(currentSpeed) / maxSpeed);
         rb.MoveRotation(rb.rotation * Quaternion.Euler(0, turnAmount, 0));
+
+
+        Vector3 euler = rb.rotation.eulerAngles;
+        rb.MoveRotation(Quaternion.Euler(0f, euler.y, 0f));
     }
 
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log(" Somethging hit..." + other.gameObject.tag);
-        if (other.gameObject.tag == "FinishLine")
+        if ((other.gameObject.tag == "FinishLine") && (GameManager.GameStarted))
         {
             Winner.text = Winner.text + GetComponentInChildren<TMP_Text>(true).text;
             Debug.Log("The winner is " + GetComponentInChildren<TMP_Text>(true).text);
@@ -112,6 +129,9 @@ public class CycleController : MonoBehaviour
 
     IEnumerator ShowWinner()
     {
+        GM.GetComponent<GameManager>().BGM.Stop();
+        GM.GetComponent<GameManager>().RaceSound.Stop();
+        GM.GetComponent<GameManager>().WinSound.Play();
         Winner.gameObject.SetActive(true);
         WinnerText.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);

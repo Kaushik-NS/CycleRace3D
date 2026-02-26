@@ -64,6 +64,8 @@ public class CycleAssignmentManager : MonoBehaviour
         Debug.Log("Player " + (selectedPlayer + 1) +
                   " got Cycle " + (cycleIndex + 1));
 
+        GM.GetComponent<GameManager>().SelectSound.Play();
+
         // Disable chosen player button
         playerButtons[selectedPlayer].interactable = false;
 

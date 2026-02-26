@@ -40,6 +40,11 @@ public class GameManager : MonoBehaviour
     public UnityEngine.UI.Slider meterSlider;
     public TrackGenerator trackGenerator;
 
+    public AudioSource BGM;
+    public AudioSource RaceSound;
+    public AudioSource WinSound;
+
+    public AudioSource SelectSound;
 
 
     void Awake()
@@ -61,6 +66,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        BGM.Stop();
+        RaceSound.Play();
         GameStarted = true;
         HomeScreenPanel.SetActive(false);
         CycleSelectionScreen.SetActive(false);
@@ -232,6 +239,12 @@ public class GameManager : MonoBehaviour
             float selectedDistance = meterSlider.value;
             trackGenerator.BuildTrack(selectedDistance);
         }
+
+    }
+
+    public void SetTrackLength()
+    {
+
     }
 
     void UpdateHUDNames()

@@ -29,7 +29,7 @@ public class FollowCamera : MonoBehaviour
         // Look forward but keep camera upright
         Vector3 lookDir = currentLeader.forward;
         lookDir.y = 0f;
-
+        lookDir.Normalize();
         if (lookDir.sqrMagnitude > 0.01f)
         {
             Quaternion rot = Quaternion.LookRotation(lookDir);
